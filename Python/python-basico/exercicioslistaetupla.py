@@ -127,7 +127,8 @@ print(nova_tupla)
  informar o nome o usuário pode digitar letras maiúsculas ou
  minúsculas"""
 
-nome = print(input('Digite seu nome (em letras minusculas): ")
-
+nome = input('Digite seu nome (em letras minusculas): ')
+print(nome[:])   #Pegando a string do início ao fim
+print(nome[::-1]) # Slicing com passo negativo
 
 
