@@ -75,17 +75,28 @@ IMC = peso / (altura*altura)
 print(f'Seu IMC é {IMC}')
 
 
-# 7. Faça um Programa que pergunte quanto você ganha por hora e o
-# número de horas trabalhadas no mês.Calcule e mostre o total do seu
-# salário no referido mês.
-# 8.
-# Solicite ao usuário o número de horas de exercício físico por semana.
-# Calcule o total de calorias queimadas em um mês, considerando uma
-# média de 5 calorias por minuto de exercício.
-#9. Faça um Programa que utilize 4 variáveis como preferir e no final print
-# uma mensagem amigável utilizando as variáveis criadas.
+# 7. Faça um Programa que pergunte quanto você ganha por hora e o número de horas trabalhadas no mês.Calcule e mostre o total do seu salário no referido mês.
+ganho_por_hora = float(input("Digite quanto você ganha por hora: "))
+horas_trabalhadas = float(input("Digite o número de horas trabalhadas no mês: "))
+salario_total = (ganho_por_hora * horas_trabalhadas)
+print(f"O total do seu salário no mês é: R$ {salario_total:.2f}")
+
+
+# 8. Solicite ao usuário o número de horas de exercício físico por semana. Calcule o total de calorias queimadas em um mês, considerando uma média de 5 calorias por minuto de exercício.
+horas_exercicio = float(input("Digite o número de horas de exercício físico por seman: "))
+calorias = (horas_exercicio  * 5 *60 * 4)
+print(f"O total de calorias gastas no mês é: {calorias}")
+
+
+#9. Faça um Programa que utilize 4 variáveis como preferir e no final print # uma mensagem amigável utilizando as variáveis criadas.
 # Exemplos de variáveis: nome, idade, lugar, profissão ....
-# Exemplo de retorno: Olá Maria, prazer te conhecer. Sou de São Paulo
-# também e estou migrando de área.
-# Lembrando que para o retorno vamos usar print com as variáveis
-# criadas e este texto é somente um exemplo, utilizem a criatividade
+# Exemplo de retorno: Olá Maria, prazer te conhecer. Sou de São Paulo também e estou migrando de área.
+# Lembrando que para o retorno vamos usar print com as variáveis criadas e este texto é somente um exemplo, utilizem a criatividade
+
+mercado_dados = float(input("Quanto tempo leva para concluir as aulas de mercado de dados (em horas)? "))
+metodologia_agil = float(input("Quanto tempo leva para concluir as aulas de metodologia ágil (em horas)? "))
+git_github = float(input("Quanto tempo leva para concluir as aulas de git e git hub (em horas)? "))
+python_data_science = float(input("Quanto tempo leva para concluir as aulas de python para data science (em horas)? "))
+total_horas = mercado_dados + metodologia_agil + git_github + python_data_science
+media_horas_por_dia = total_horas / (5 * 4)  # Considerando 4 semanas no mês
+print(f"Você precisará estudar em média {media_horas_por_dia:.2f} horas por dia durante 5 dias da semana para concluir a primeira fase do bootcamp.")
