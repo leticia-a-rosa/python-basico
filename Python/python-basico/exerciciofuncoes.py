@@ -110,4 +110,20 @@ print(f"O valor total em reais é: R$ {total_reais:.2f}")
 #  na string e retorne o total de vogais. Solicite ao usuário para inserir uma
 #  frase e utilize a função para contar as vogais.
 
+vogais = "aeiouAEIOU"
+num_vogais = 0
+
+consoantes ="bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+num_consoantes = 0
+
+palavra = input('digite a palavra: ')
+
+for char in palavra:
+    if char in vogais:
+        num_vogais += 1
+    elif char in consoantes:
+        num_consoantes += 1
+
+print(f'O número de vogais é: {num_vogais}')
+print(f'O número de consoantes é: {num_consoantes}')
 
