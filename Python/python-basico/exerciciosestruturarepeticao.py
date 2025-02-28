@@ -34,16 +34,22 @@ else:
     else:
         print('Aluno reprovado')
 
- 5. Desenvolva um programa que solicite ao usuário os comprimentos dos três
+""" 5. Desenvolva um programa que solicite ao usuário os comprimentos dos três
  lados de um triângulo e classifique-o como equilátero, isósceles ou escaleno.
  equilátero: todos os lados com o mesmo valor
  isósceles: dois lados com o mesmo valor
- escaleno: todos os lados com medidas distintas.
- 6. Crie um programa que solicite ao usuário um login e uma senha. O
+ escaleno: todos os lados com medidas distintas."""
+
+
+""" 6. Crie um programa que solicite ao usuário um login e uma senha. O
  programa deve permitir o acesso apenas se o usuário for "admin" e a senha
- for "admin123", caso contrário imprima uma mensagem de erro.
- 7. Desenvolver um programa que solicite a idade do usuário e identifique se
- ele é uma criança, um adolescente, adulto ou idoso.
- 8. Criar um programa em Python que solicite três números ao usuário, utilize
+ for "admin123", caso contrário imprima uma mensagem de erro."""
+
+
+""" 7. Desenvolver um programa que solicite a idade do usuário e identifique se
+ ele é uma criança, um adolescente, adulto ou idoso."""
+
+
+""" 8. Criar um programa em Python que solicite três números ao usuário, utilize
  estruturas condicionais para determinar o maior entre eles e apresente o
- resultado
+ resultado"""
