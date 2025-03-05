@@ -46,7 +46,7 @@
 #     conexao.close()
 
 
-
+#exercicios do colab
 import sqlite3
 
 
@@ -157,18 +157,43 @@ cursor = conexao.cursor()
 
 # 7. Atualização e Remoção com Condições
 # a) Atualize o saldo de um cliente específico.
-
+# cursor.execute('UPDATE clientes SET saldo = 1000009 WHERE id = 1')
 
 # b) Remova um cliente pelo seu ID.
-
+#cursor.execute('DELETE FROM clientes where id=5')
 
 # 8. Junção de Tabelas
-# Crie uma segunda tabela chamada "compras" com os campos: id
-# (chave primária), cliente_id (chave estrangeira referenciando o id
-# da tabela "clientes"), produto (texto) e valor (real). Insira algumas
-# compras associadas a clientes existentes na tabela "clientes".
-# Escreva uma consulta para exibir o nome do cliente, o produto e o
-# valor de cada compra.
+# Crie uma segunda tabela chamada "compras" com os campos: id (chave primária), cliente_id (chave estrangeira referenciando o id da tabela "clientes"), produto (texto) e valor (real).
+#cursor.execute('CREATE TABLE compras (id INTEGER PRIMARY KEY AUTOINCREMENT, cliente_id INT, produto VARCHAR(100), valor REAL);')
+
+# Insira algumas compras associadas a clientes existentes na tabela "clientes".
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (1, 1, "livro", 23.45)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (2, 2, "roupa", 45.67)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (3, 3, "sapato", 78.90)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (4, 4, "livro", 12.34)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (5, 5, "roupa", 56.78)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (6, 6, "sapato", 34.56)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (7, 7, "livro", 67.89)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (8, 8, "roupa", 23.45)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (9, 9, "sapato", 45.67)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (10, 10, "livro", 78.90)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (11, 1, "roupa", 12.34)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (12, 2, "sapato", 56.78)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (13, 3, "livro", 34.56)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (14, 4, "roupa", 67.89)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (15, 5, "sapato", 23.45)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (16, 6, "livro", 45.67)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (17, 7, "roupa", 78.90)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (18, 8, "sapato", 12.34)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (19, 9, "livro", 56.78)')
+# cursor.execute('INSERT INTO compras (id, cliente_id, produto, valor) VALUES (20, 10, "roupa", 34.56)')
+
+# # Escreva uma consulta para exibir o nome do cliente, o produto e o valor de cada compra.
+# cursor.execute('CREATE TEMPORARY TABLE compras_clientes AS SELECT clientes.nome, compras.produto, compras.valor FROM compras INNER JOIN clientes ON compras.id_clientes = clientes.id;')
+# cursor.execute('SELECT * FROM compras_clientes')
+# resultado_vendas = cursor.fetchall() #Recupera todas as linhas do resultado da consulta e armazena na variável resultado_vendas
+# for resultado in resultado_vendas: # Itera sobre cada linha do resultado
+#     print(resultado) #Imprime cada linha individualmente
 
 
 conexao.commit()
